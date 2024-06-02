@@ -8,21 +8,25 @@ plugins {
 }
 
 publishConfig {
-    url = "https://maven.pkg.github.com/KryptonReborn/kmp-template"
-    groupId = "kmp.template"
+    url = "https://maven.pkg.github.com/KryptonReborn/kotlin-cose"
+    groupId = "dev.kryptonreborn.cose"
     artifactId = "library"
 }
 
 version = "0.0.2"
 
 android {
-    namespace = "kmp.template"
+    namespace = "dev.kryptonreborn.cose"
 }
 
 kotlin {
     sourceSets {
         val commonMain by getting {
-            dependencies {}
+            dependencies {
+                implementation(libs.kotlinBignum)
+                implementation(libs.cbor)
+                implementation(libs.kotlinxIo)
+            }
         }
     }
 }

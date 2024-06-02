@@ -6,6 +6,9 @@ androidCompileSdk = "34"
 kotlinxSerialization = "1.6.3"
 kotlinTestingResource = "0.4.1"
 ktlintVersion = "12.1.1"
+kotlinBignum = "0.3.9"
+kotlinxIo = "0.3.3"
+cbor = "0.1.0"
 
 [libraries]
 kotlinGradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
@@ -15,6 +18,9 @@ androidGradlePlugin = { group = "com.android.tools.build", name = "gradle", vers
 kotlinTest = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlinxSerializationJson = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
 kotlinTestingResource = { module = "com.goncalossilva:resources", version.ref = "kotlinTestingResource" }
+kotlinBignum = { module = "com.ionspin.kotlin:bignum", version.ref = "kotlinBignum" }
+cbor = { module = "dev.kryptonreborn.cbor:cbor", version.ref = "cbor" }
+kotlinxIo = { module = "org.jetbrains.kotlinx:kotlinx-io-core", version.ref = "kotlinxIo" }
 
 [plugins]
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
@@ -23,6 +29,7 @@ kotlinPluginSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", 
 kotlinTestingResource = { id = "com.goncalossilva.resources", version.ref = "kotlinTestingResource" }
 ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlintVersion" }
 mavenPublish = { id = "maven-publish", version = "unspecified" }
+
 # Plugins defined by this project
 commonMppLib = { id = "common.mpp.lib", version = "unspecified" }
 commonMppPublish = { id = "common.mpp.publish", version = "unspecified" }
